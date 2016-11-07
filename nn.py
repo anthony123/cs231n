@@ -1,4 +1,4 @@
-import load_CIFAR10 as load
+import load_full_CIFAR10 as load
 import NearestNeighbor as NN
 import numpy as np
 
@@ -7,7 +7,7 @@ import numpy as np
 #Xte: test data
 #Yte: test label
 
-Xtr, Ytr, Xte, Yte = load.load_CIFAR10('data_batch_1')
+Xtr, Ytr, Xte, Yte = load.load_CIFAR10('cifar-10-batches-py/')
 
 #flatten out all images to be one-dimensional
 #training data

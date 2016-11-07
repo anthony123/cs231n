@@ -29,5 +29,5 @@ class KNearestNeighbor(object):
                 num = np.argmax(counts)
                 bool_indices = (min_nums == num)
                 result_indices = min_indices[bool_indices]
-                Ypred[k][i] = result_indices[0]
+                Ypred[k][i] = self.ytr[result_indices[0]]
         return Ypred
