@@ -1,5 +1,5 @@
 import numpy as np
-import load_CIFAR10 as load
+import load_full_CIFAR10 as load
 import KNearestNeighbor as KNN
 
 #Xtr: training data
@@ -7,7 +7,7 @@ import KNearestNeighbor as KNN
 #Xte: test data
 #Yte: test label
 
-Xtr, Ytr, Xte, Yte = load.load_CIFAR10('data_batch_1')
+Xtr, Ytr, Xte, Yte = load.load_CIFAR10('cifar-10-batches-py/')
 
 #flatten out all images to be one-dimensional
 #training data
