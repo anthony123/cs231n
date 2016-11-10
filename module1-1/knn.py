@@ -31,8 +31,8 @@ knn = KNN.KNearestNeighbor()
 knn.train(Xtr_rows, Ytr)
 
 #k numbers
-knums = np.array([1])
-#knums = np.array([1,3,5,10,20,50,100])
+#knums = np.array([1])
+knums = np.array([1,3,5,10,20,50,100])
 
 #predict labels on the test images
 Yte_predict = knn.predict(Xval_rows, knums)
