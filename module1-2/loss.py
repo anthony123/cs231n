@@ -32,13 +32,15 @@ def L_i_vectorized(x,y,W):
     return loss_i
 
 def L(X,y,W):
-    #X: all training examples [3073x50000]
+    #X: all training examples [3073x45000]
     #y: [50000x1]
     #W: [10x3073]
     delta = 1.0
-    scores = W.dot(X) #scores: 10 x 50000
+    scores = W.dot(X) #scores: 10 x 45000
+
     margins = np.maximum(0, scores - scores[y, np.arange(scores.shape[1])] + delta)
     margins[:,y] = 0;
-    loss = np.sum(margins, axis=1)
+
+    loss = np.sum(margins)
 
     return loss
