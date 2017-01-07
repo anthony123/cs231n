@@ -39,7 +39,7 @@ def L(X,y,W):
     scores = W.dot(X) #scores: 10 x 45000
 
     margins = np.maximum(0, scores - scores[y, np.arange(scores.shape[1])] + delta)
-    margins[:,y] = 0;
+    margins[y,np.arange(y.shape[0]) ] = 0;
 
     loss = np.sum(margins)
 
